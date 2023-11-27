@@ -66,7 +66,8 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="button" class="btn btn-primary w-100 h-100">
+                    <button type="button" class="btn btn-primary w-100 h-100" data-bs-toggle="modal"
+                        data-bs-target="#activities_card">
                         <i class="fa fa-tasks fa-8x"></i>
                         <h1 class="card-title">Activities</h1>
                     </button>
@@ -120,7 +121,71 @@
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Event Modal -->
+        <div id="activities_card" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="col">
+                            <div class="row">
+                                <h2>Activities List</h2>
+                            </div>
+                            <div class="row">
+                                <p class="text-muted">Android Conference - 04/01/2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="checkbox" value="" aria-label="..."
+                                            checked />
+                                        <s class="me-3">What is the event objective?</s>
+                                        <button type="button" class="btn btn-success">
+                                            Redeem
+                                        </button>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="checkbox" value=""
+                                            aria-label="..." />
+                                        Take a selfie with your new friends!
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="checkbox" value=""
+                                            aria-label="..." />
+                                        What question did you ask in event?
+
+                                        <input type="text" class="form-control me-3" value="" placeholder="Fill answer here!">
+                                        <button type="button" class="btn btn-primary">
+                                            Submit
+                                        </button>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="checkbox" value=""
+                                            aria-label="..." />
+                                        Adjust the components
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="checkbox" value=""
+                                            aria-label="..." />
+                                        Buy a coffee for your friends
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#show">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 
