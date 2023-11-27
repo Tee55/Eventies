@@ -15,7 +15,18 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+
+    
 </head>
+
+<script>
+    $(function () {
+        $("#navbar").load("navbar.html");
+    });
+</script>
+<section id="navbar">
+
+</section>
 
 <body>
     <div class="container-fluid p-2">
@@ -228,16 +239,16 @@
                 var category = events[i].extendedProps.category;
                 if (category == $(this).val()) {
                     events[i].setProp("display", "auto");
-                    
+
                     if (!$('#show_only').is(':checked')) {
                         events[i].setProp("backgroundColor", "red");
                     } else {
                         events[i].setProp("backgroundColor", "blue");
                     }
-                    
+
                 } else {
                     if ($('#show_only').is(':checked')) {
-                        events[i].setProp("display", "none"); 
+                        events[i].setProp("display", "none");
                     } else {
                         events[i].setProp("backgroundColor", "blue");
                     }
