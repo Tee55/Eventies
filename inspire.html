@@ -526,6 +526,49 @@
                                 &nbsp;<img src="images/profile01.jpg" class="rounded-circle" style="max-width: 6%;"
                                     data-bs-toggle="tooltip" data-bs-placement="top" title="Teerapath Sattabongkot">
                             </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
+                                    href="#what">What</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
+                                    href="#where">Where</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
+                                href="#when">When</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
+                                href="#why">Why</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
+                                href="#how">How</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
+                                href="#other">Other</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm question_category" data-bs-toggle="collapse"
+                                    href="#ask" >My Question is not
+                                    there</button>
+                            </div>
+                            <div class="col-12">
+                                <div class="collapse question_card" id="what">
+                                    <div class="card card-body">
+                                        <p class="fw-bold">What is this event objective? </p>
+                                        <p class="text-muted">You can meet with various android speaker and gain some
+                                            insight.</p>
+                                        <p class="fw-bold">What is the status of the event? </p>
+                                        <p class="text-muted">It is happening right now!</p>
+                                    </div>
+                                </div>
+                                <div class="collapse question_card" id="where">
+                                    <div class="card card-body">
+                                        <p class="fw-bold">Where is this event? </p>
+                                        <p class="text-muted">We held at Event hall, Siam Paragon 3 floor.</p>
+                                        <p class="fw-bold">Where can I put my stuff? </p>
+                                        <p class="text-muted">We provide a private locker for first 20 people. You can talk to us in the event hall.</p>
+                                    </div>
+                                </div>
+                                <div class="collapse question_card" id="ask">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value=""
+                                            placeholder="Ask event organizer">
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -540,8 +583,6 @@
             </div>
         </div>
     </section>
-
-
 </body>
 
 <script>
@@ -552,6 +593,12 @@
             $("#create_event").show();
 
         });
+        $('.question_category').click(function () {
+            $('.question_card').each(function(){
+                $(this).collapse('hide');
+            });
+        });
+
     });
 
 </script>
