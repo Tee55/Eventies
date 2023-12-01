@@ -21,9 +21,9 @@
         async></script>
 </head>
 
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <img src="images/eventies_logo.png" class="rounded" style="max-width: 2%;">
+        <a class="navbar-brand" href="#"><img class="rounded" src="images/eventies_logo.png" height="42" width="42"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,50 +45,41 @@
 </nav>
 
 <body>
-    <section class="container-fluid p-2 d-flex justify-content-center">
-        <div id="menu_holder" class="d-grid gap-2">
-            <div class="row">
-                <div class="col">
-                    <a href="calendar.html">
-                        <button type="button" class="btn btn-primary w-100 h-100">
-                            <i class="fa fa-magnifying-glass fa-8x"></i>
-                            <h1 class="card-title">Find Event</h1>
-                        </button>
-                    </a>
-                </div>
+    <section class="container d-grid gap-2 p-2">
+        <div class="row">
+            <div class="col d-grid gap-2">
+                <a type="button" class="btn btn-primary" href="calendar.html">
+                    <i class="fa fa-magnifying-glass fa-8x"></i>
+                    <h1 class="card-title">Find Event</h1>
+                </a>
             </div>
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-primary w-100 h-100" data-bs-toggle="modal"
-                        data-bs-target="#checkin_card">
-                        <i class="fa fa-map-marker-alt fa-8x"></i>
-                        <h1 class="card-title">Event Check In</h1>
-                    </button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary w-100 h-100" data-bs-toggle="modal"
-                        data-bs-target="#activities_card">
-                        <i class="fa fa-tasks fa-8x"></i>
-                        <h1 class="card-title">Activities</h1>
-                    </button>
-                </div>
-
+        </div>
+        <div class="row">
+            <div class="col d-grid gap-2">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#checkin_card">
+                    <i class="fa fa-map-marker-alt fa-8x"></i>
+                    <h1 class="card-title">Event Check In</h1>
+                </button>
             </div>
-            <div class="row">
-                <div class="col">
-                    <a href="points.html">
-                        <button type="button" class="btn btn-primary w-100 h-100">
-                            <i class="fa fa-gift fa-8x"></i>
-                            <h1 class="card-title">Redeem</h1>
-                        </button>
-                    </a>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary w-100 h-100">
-                        <i class="fa fa-comments fa-8x"></i>
-                        <h1 class="card-title">Write Review</h1>
-                    </button>
-                </div>
+            <div class="col d-grid gap-2">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#activities_card">
+                    <i class="fa fa-tasks fa-8x"></i>
+                    <h1 class="card-title">Activities</h1>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-grid gap-2">
+                <a type="button" class="btn btn-primary" href="points.html">
+                    <i class="fa fa-gift fa-8x"></i>
+                    <h1 class="card-title">Redeem</h1>
+                </a>
+            </div>
+            <div class="col d-grid gap-2">
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-comments fa-8x"></i>
+                    <h1 class="card-title">Write Review</h1>
+                </button>
             </div>
         </div>
 
