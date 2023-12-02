@@ -44,239 +44,233 @@
     </div>
 </nav>
 
-<body class="vh-100">
-    <section class="container d-grid gap-2 p-2">
-        <div class="row">
-            <div class="col d-grid">
-                <a type="button" class="btn btn-primary" href="calendar.html">
-                    <i class="fa fa-magnifying-glass fa-8x"></i>
-                    <h1 class="card-title">Find Event</h1>
-                </a>
-            </div>
+<div class="container d-flex flex-column gap-2 p-2">
+    <div class="row">
+        <div class="col d-grid">
+            <a type="button" class="btn btn-primary" href="calendar.html">
+                <i class="fa fa-magnifying-glass fa-8x"></i>
+                <h1 class="card-title">Find Event</h1>
+            </a>
         </div>
-        <div class="row">
-            <div class="col d-grid">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#checkin_card">
-                    <i class="fa fa-map-marker-alt fa-8x"></i>
-                    <h1 class="card-title">Event Check In</h1>
-                </button>
-            </div>
-            <div class="col d-grid">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#activities_card">
-                    <i class="fa fa-tasks fa-8x"></i>
-                    <h1 class="card-title">Activities</h1>
-                </button>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col d-grid">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#checkin_card">
+                <i class="fa fa-map-marker-alt fa-8x"></i>
+                <h1 class="card-title">Event Check In</h1>
+            </button>
         </div>
-        <div class="row">
-            <div class="col d-grid">
-                <a type="button" class="btn btn-primary" href="points.html">
-                    <i class="fa fa-gift fa-8x"></i>
-                    <h1 class="card-title">Redeem</h1>
-                </a>
-            </div>
-            <div class="col d-grid">
-                <button type="button" class="btn btn-primary">
-                    <i class="fa fa-comments fa-8x"></i>
-                    <h1 class="card-title">Write Review</h1>
-                </button>
-            </div>
+        <div class="col d-grid">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#activities_card">
+                <i class="fa fa-tasks fa-8x"></i>
+                <h1 class="card-title">Activities</h1>
+            </button>
         </div>
+    </div>
+    <div class="row">
+        <div class="col d-grid">
+            <a type="button" class="btn btn-primary" href="points.html">
+                <i class="fa fa-gift fa-8x"></i>
+                <h1 class="card-title">Redeem</h1>
+            </a>
+        </div>
+        <div class="col d-grid">
+            <button type="button" class="btn btn-primary">
+                <i class="fa fa-comments fa-8x"></i>
+                <h1 class="card-title">Write Review</h1>
+            </button>
+        </div>
+    </div>
 
-        <!-- Check In Modal -->
-        <div id="checkin_card" class="modal fade" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Check In</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row g-3">
-                            <div class="col-12 text-center">
-                                <i class="fa-regular fa-square fa-10x"></i>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="button" class="btn btn-success">
-                                    Verify
-                                </button>
-                            </div>
+    <!-- Check In Modal -->
+    <div id="checkin_card" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Check In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-12 text-center">
+                            <i class="fa-regular fa-square fa-10x"></i>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="button" class="btn btn-success">
+                                Verify
+                            </button>
                         </div>
                     </div>
-                    <div class=" modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">
-                            Submit
-                        </button>
-                    </div>
+                </div>
+                <div class=" modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">
+                        Submit
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Activites Modal -->
-        <div id="activities_card" class="modal fade" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
+    <!-- Activites Modal -->
+    <div id="activities_card" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col">
+                        <div class="row">
+                            <h2>Activities List</h2>
+                        </div>
+                        <div class="row">
+                            <p class="text-muted">Android Conference - 04/01/2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
                         <div class="col">
-                            <div class="row">
-                                <h2>Activities List</h2>
-                            </div>
-                            <div class="row">
-                                <p class="text-muted">Android Conference - 04/01/2020</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row g-3">
-                            <div class="col">
-                                <ul class="list-group">
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value="" aria-label="..."
-                                            checked />
-                                        <s class="me-3">What is the event objective?</s>
-                                        <button type="button" class="btn btn-success">
-                                            Get 10 points
-                                        </button>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            aria-label="..." />
-                                        Take a selfie with your new friends!
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            aria-label="..." />
-                                        What question did you ask in event?
-
-                                        <input type="text" class="form-control me-3" value=""
-                                            placeholder="Fill answer here!">
-                                        <button type="button" class="btn btn-primary">
-                                            Submit
-                                        </button>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            aria-label="..." />
-                                        <span class="me-3">Connect with your friends!</span>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#connect_card">
-                                            Scan
-                                        </button>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            aria-label="..." />
-                                        Buy a coffee for your friends
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Connect Modal -->
-        <div id="connect_card" class="modal fade" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Connect with your friend</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row g-3">
-                            <div class="col-12 text-center">
-                                <i class="fa-regular fa-square fa-10x"></i>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                    data-bs-target="#name_card">
-                                    Show your card
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Name Card Modal -->
-        <div id="name_card" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="card p-3">
-                        <div class="card-body">
-                            <div class="text-center justify-content-center">
-                                <img src="images/profile01.jpg" class="rounded-circle p-2" style="max-width: 30%;">
-                                <h5 class="card-title">Teerapath Sattabongkot</h5>
-                                <h6 class="card-title">Tee</h6>
-                                <p class="text-muted">CEO</p>
-                            </div>
                             <ul class="list-group">
                                 <li class="list-group-item d-flex align-items-center">
-                                    <a class="icon-link" href="#">
-                                        <i class="fa fa-envelope"></i>
-                                        <span>
-                                            teerapaths@gmail.com
-                                        </span>
-                                    </a>
+                                    <input class="form-check-input me-3" type="checkbox" value="" aria-label="..."
+                                        checked />
+                                    <s class="me-3">What is the event objective?</s>
+                                    <button type="button" class="btn btn-success">
+                                        Get 10 points
+                                    </button>
                                 </li>
                                 <li class="list-group-item d-flex align-items-center">
-                                    <a class="icon-link" href="#">
-                                        <i class="fa fa-phone"></i>
-                                        <span>
-                                            0908881234
-                                        </span>
-                                    </a>
+                                    <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                                    Take a selfie with your new friends!
                                 </li>
                                 <li class="list-group-item d-flex align-items-center">
-                                    <a class="icon-link" href="#">
-                                        <i class="fa fa-globe"></i>
-                                        <span>
-                                            Tee55.com
-                                        </span>
-                                    </a>
+                                    <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                                    What question did you ask in event?
+
+                                    <input type="text" class="form-control me-3" value=""
+                                        placeholder="Fill answer here!">
+                                    <button type="button" class="btn btn-primary">
+                                        Submit
+                                    </button>
                                 </li>
                                 <li class="list-group-item d-flex align-items-center">
-                                    <a class="icon-link" href="#">
-                                        <i class="fa-brands fa-line"></i>
-                                        <span>
-                                            teerapaths
-                                        </span>
-                                    </a>
+                                    <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                                    <span class="me-3">Connect with your friends!</span>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#connect_card">
+                                        Scan
+                                    </button>
                                 </li>
                                 <li class="list-group-item d-flex align-items-center">
-                                    <a class="icon-link" href="#">
-                                        <i class="fa-brands fa-facebook"></i>
-                                        <span>
-                                            Teerapath Sattabongkot
-                                        </span>
-                                    </a>
+                                    <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                                    Buy a coffee for your friends
                                 </li>
                             </ul>
-                            <div class="text-center p-2">
-                                <i class="fa fa-qrcode fa-10x"></i>
-                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connect Modal -->
+    <div id="connect_card" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Connect with your friend</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-12 text-center">
+                            <i class="fa-regular fa-square fa-10x"></i>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#name_card">
+                                Show your card
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class=" modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Name Card Modal -->
+    <div id="name_card" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card p-3">
+                    <div class="card-body">
+                        <div class="text-center justify-content-center">
+                            <img src="images/profile01.jpg" class="rounded-circle p-2" style="max-width: 30%;">
+                            <h5 class="card-title">Teerapath Sattabongkot</h5>
+                            <h6 class="card-title">Tee</h6>
+                            <p class="text-muted">CEO</p>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center">
+                                <a class="icon-link" href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    <span>
+                                        teerapaths@gmail.com
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <a class="icon-link" href="#">
+                                    <i class="fa fa-phone"></i>
+                                    <span>
+                                        0908881234
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <a class="icon-link" href="#">
+                                    <i class="fa fa-globe"></i>
+                                    <span>
+                                        Tee55.com
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <a class="icon-link" href="#">
+                                    <i class="fa-brands fa-line"></i>
+                                    <span>
+                                        teerapaths
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <a class="icon-link" href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                    <span>
+                                        Teerapath Sattabongkot
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="text-center p-2">
+                            <i class="fa fa-qrcode fa-10x"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</body>
+    </div>
+</div>
 
 </html>
