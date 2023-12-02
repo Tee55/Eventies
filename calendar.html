@@ -16,7 +16,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
 
-    
+
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col">
                     <select id="event_category" class="form-select">
-                        <option value="programming">Programming</option>
+                        <option value="programming" selected>Programming</option>
                         <option value="business">Business</option>
                         <option value="art">Art</option>
                     </select>
@@ -171,8 +171,8 @@
                     title: 'Android Conference',
                     location: 'Siam Paragon (Level 2 Paragon Department Store, 991 Rama 1 Road, Pathum Wan, Pathum Wan Bangkok City 10330, Thailand)',
                     allDay: false,
-                    start: '2023-11-18T10:30:00',
-                    end: '2023-11-19T11:30:00',
+                    start: '2023-12-18T10:30:00',
+                    end: '2023-12-19T11:30:00',
                     image: 'images/event_poster01.webp',
                     category: 'programming',
                     display: 'auto',
@@ -184,8 +184,8 @@
                     title: 'Flutter Conference',
                     location: 'Srinakharinwirot University, 114 Soi Sukhumvit 23, Khwaeng Khlong Toei Nuea, Watthana, Krung Thep Maha Nakhon 10110, Thailand',
                     allDay: false,
-                    start: '2023-11-14T10:30:00',
-                    end: '2023-11-15T11:30:00',
+                    start: '2023-12-14T10:30:00',
+                    end: '2023-12-15T11:30:00',
                     image: 'images/event_poster01.webp',
                     category: 'programming',
                     display: 'auto',
@@ -197,8 +197,8 @@
                     title: 'Business Conference',
                     location: 'Srinakharinwirot University, 114 Soi Sukhumvit 23, Khwaeng Khlong Toei Nuea, Watthana, Krung Thep Maha Nakhon 10110, Thailand',
                     allDay: false,
-                    start: '2023-11-16T10:30:00',
-                    end: '2023-11-17T11:30:00',
+                    start: '2023-12-16T10:30:00',
+                    end: '2023-12-17T11:30:00',
                     image: 'images/event_poster01.webp',
                     category: 'business',
                     display: 'auto',
@@ -222,13 +222,13 @@
                 right: 'today,dayGridMonth,timeGridWeek,timeGridDay,listMonth'
             }
         });
-        calendar.render();
+        filter_calendar($("#event_category").val());
 
-        $("#event_category").change(function () {
+        function filter_calendar(category) {
             var events = calendar.getEvents();
             for (var i = 0; i < events.length; i++) {
-                var category = events[i].extendedProps.category;
-                if (category == $(this).val()) {
+                var this_category = events[i].extendedProps.category;
+                if (this_category == category) {
                     events[i].setProp("display", "auto");
 
                     if (!$('#show_only').is(':checked')) {
@@ -246,6 +246,10 @@
                 }
             }
             calendar.render();
+        };
+
+        $("#event_category").change(function () {
+            filter_calendar($(this).val());
         });
     });
 </script>
