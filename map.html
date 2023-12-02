@@ -18,8 +18,62 @@
 </head>
 
 <body>
-    <div class="container vh-100">
-        <div id="map" class="h-100"></div>
+    <div class="container-fluid p-2">
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" value="" placeholder="Search Event here">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#filter_card"><i class="fa fa-filter"></i>&nbsp;Filter</button>
+                </div>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col">
+                <div id="map" class="vh-100">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Modal -->
+        <div id="filter_card" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Filter</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="distance" class="form-label">Distance</label>
+                                <input id="distance" type="range" class="form-range" min="0" max="100" value="5">
+                            </div>
+                            <div class="col-12">
+                                <label for="distance" class="form-label">Ticket Price</label>
+                                <input id="distance" type="range" class="form-range" min="0" max="100" value="5">
+                            </div>
+                            <div class="col-12">
+                                <select id="event_category" class="form-select">
+                                    <option selected>Show only this category</option>
+                                    <option value="programming">Programming</option>
+                                    <option value="business">Business</option>
+                                    <option value="art">Art</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Clear all</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#show">
+                            Show(100 events)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
     </div>
 
     <script>
@@ -35,12 +89,20 @@
             iconAnchor: [15.5, 42],
             popupAnchor: [0, -45]
         });
-        var tech_popup = L.popup().setContent("Anroid Conference");
+
+        const pet_icon = L.icon({
+            iconUrl: `images/pet_icon.png`,
+            iconSize: [30, 30],
+            iconAnchor: [15.5, 42],
+            popupAnchor: [0, -45]
+        });
+
         const tech_marker = L.marker([13.912262, 100.655355], {
             icon: tech_icon
-        }).bindPopup(tech_popup).addTo(map);
-
-
+        }).bindPopup(L.popup().setContent("Anroid Conference 02/12/2023 13:00 - 15:00")).addTo(map);
+        const pet_marker = L.marker([13.912322, 100.652843], {
+            icon: pet_icon
+        }).bindPopup(L.popup().setContent("Pet meetup 05/12/2023 13:00 - 15:00")).addTo(map);
     </script>
 
 </body>

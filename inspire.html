@@ -57,13 +57,13 @@
                     data-bs-target="#upload_card">Create Event</button>
             </div>
             <div class="col d-flex justify-content-end">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#signup_card">Signup</button>
+                <button id="be_participants_modal_button" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#be_participants_modal">Signup</button>
             </div>
         </div>
 
         <!-- Signup Modal -->
-        <div id="signup_card" class="modal fade" tabindex="-1">
+        <div id="be_participants_modal" class="modal fade" tabindex="-1">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -154,7 +154,8 @@
                     </div>
                     <div class=" modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Signup</button>
+                        <button id="be_participants" type="submit" class="btn btn-primary" data-bs-dismiss="modal"
+                            aria-label="Close">Signup</button>
                     </div>
                 </div>
             </div>
@@ -377,9 +378,8 @@
                 <div class="card">
                     <img src="images/event_poster01.webp" class="card-img">
                     <div class="card-img-overlay card_info" data-bs-toggle="modal" data-bs-target="#event_card">
-                        <img src="images/profile01.jpg" class="rounded-circle" style="max-width: 20%;"
-                            data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="Teerapath Sattabongkot">&nbsp;<span>Teerapath Sattabongkot</span>
+                        <img src="images/profile01.jpg" class="rounded-circle"
+                            style="max-width: 20%;">&nbsp;<span>Teerapath Sattabongkot</span>
                     </div>
 
                     <div class="card-footer text-center">
@@ -522,25 +522,27 @@
 
                             <div class="col-12">Who is going:
                                 &nbsp;<img src="images/profile01.jpg" class="rounded-circle" style="max-width: 6%;"
-                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Teerapath Sattabongkot">
+                                    data-bs-toggle="popover" data-bs-placement="top"
+                                    data-bs-content="Teerapath Sattabongkot">
                                 &nbsp;<img src="images/profile01.jpg" class="rounded-circle" style="max-width: 6%;"
-                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Teerapath Sattabongkot">
+                                    data-bs-toggle="popover" data-bs-placement="top"
+                                    data-bs-content="Teerapath Sattabongkot">
                             </div>
                             <div class="col-12">
-                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
-                                    href="#what">What</button>
-                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
-                                    href="#where">Where</button>
-                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
-                                href="#when">When</button>
-                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
-                                href="#why">Why</button>
-                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
-                                href="#how">How</button>
-                                <button type="button" class="btn btn-secondary btn-sm question_category" data-bs-toggle="collapse"
-                                href="#other">Other</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm question_category" data-bs-toggle="collapse"
-                                    href="#ask" >My Question is not
+                                <button type="button" class="btn btn-secondary btn-sm question_category"
+                                    data-bs-toggle="collapse" href="#what">What</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category"
+                                    data-bs-toggle="collapse" href="#where">Where</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category"
+                                    data-bs-toggle="collapse" href="#when">When</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category"
+                                    data-bs-toggle="collapse" href="#why">Why</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category"
+                                    data-bs-toggle="collapse" href="#how">How</button>
+                                <button type="button" class="btn btn-secondary btn-sm question_category"
+                                    data-bs-toggle="collapse" href="#other">Other</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm question_category"
+                                    data-bs-toggle="collapse" href="#ask">My Question is not
                                     there</button>
                             </div>
                             <div class="col-12">
@@ -558,7 +560,8 @@
                                         <p class="fw-bold">Where is this event? </p>
                                         <p class="text-muted">We held at Event hall, Siam Paragon 3 floor.</p>
                                         <p class="fw-bold">Where can I put my stuff? </p>
-                                        <p class="text-muted">We provide a private locker for first 20 people. You can talk to us in the event hall.</p>
+                                        <p class="text-muted">We provide a private locker for first 20 people. You can
+                                            talk to us in the event hall.</p>
                                     </div>
                                 </div>
                                 <div class="collapse question_card" id="ask">
@@ -587,14 +590,30 @@
 
 <script>
     $(document).ready(function () {
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
         $("#create_event").hide();
+        $("#be_organizers").hide();
+
+        $('#organizer_signup').click(function () {
+            $("#be_organizers").hide();
+            $("#create_event").show();
+        });
+
+        $('#be_participants').click(function () {
+            $("#be_participants_modal_button").hide();
+            $("#be_organizers").show();
+        });
+
         $('#organizer_signup').click(function () {
             $("#be_organizers").hide();
             $("#create_event").show();
 
         });
         $('.question_category').click(function () {
-            $('.question_card').each(function(){
+            $('.question_card').each(function () {
                 $(this).collapse('hide');
             });
         });
